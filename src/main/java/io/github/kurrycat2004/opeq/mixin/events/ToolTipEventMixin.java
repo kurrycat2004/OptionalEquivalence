@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalBooleanRef;
-import io.github.kurrycat2004.opeq.config.OpEqConfig;
+import io.github.kurrycat2004.opeq.config.settings.ClientSettings;
 import io.github.kurrycat2004.opeq.util.OpEqEmcHelper;
 import moze_intel.projecte.events.ToolTipEvent;
 import net.minecraft.item.ItemStack;
@@ -50,7 +50,7 @@ public class ToolTipEventMixin {
     )
     private static <E> E modifyTooltipAdd(E e, @Share("isStabilized") @NotNull LocalBooleanRef isStabilized) {
         if (!isStabilized.get()) return e;
-        if (OpEqConfig.hideEmc)
+        if (ClientSettings.INSTANCE.hideEmc)
             //noinspection unchecked
             return (E) "";
 
@@ -71,7 +71,7 @@ public class ToolTipEventMixin {
             )
     )
     private static <E> boolean wrapTooltipAdd(List<E> instance, E e, Operation<Boolean> original, @Share("isStabilized") @NotNull LocalBooleanRef isStabilized) {
-        if (isStabilized.get() && OpEqConfig.hideEmc) return false;
+        if (isStabilized.get() && ClientSettings.INSTANCE.hideEmc) return false;
         //noinspection MixinExtrasOperationParameters
         return original.call(instance, e);
     }

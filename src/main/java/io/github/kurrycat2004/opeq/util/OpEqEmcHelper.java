@@ -22,9 +22,7 @@ public class OpEqEmcHelper {
         NBTTagCompound nbt = item.getTagCompound();
         if (nbt == null) return false;
         if (nbt.getBoolean(TAG_STABILIZED)) return true;
-        System.out.println(nbt);
         for (String tag : STABILIZED_TAGS) {
-            System.out.println(tag);
             if (nbt.hasKey(tag)) return true;
         }
         return false;
