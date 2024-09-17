@@ -1,0 +1,12 @@
+[{
+    "modid": "${modid}",
+    "name": "${modname}",
+    "description": "Stabilize your EMC items to prevent them from being transmuted",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "logoFile": "",
+    "url": "",
+    "authorList": ["kurrycat"],
+    "credits": "",
+    "dependencies": ["projecte"]
+}]

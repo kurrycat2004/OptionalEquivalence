@@ -1,0 +1,10 @@
+# Items
+item.destabilization_scissors.name=Destabilization Scissors
+item.stabilization_tape.name=Stabilization Tape
+
+
+# Config
+opeq.config.hide_emc=Hide EMC
+opeq.config.hide_emc.tooltip=Hide EMC tooltip completely when the item is stabilized
+opeq.config.stabilized_tags=Stabilized NBT Tags
+opeq.config.stabilized_tags.tooltip=List of NBT tags that should stabilize an item

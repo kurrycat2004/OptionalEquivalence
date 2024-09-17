@@ -1,0 +1,10 @@
+{
+  "package": "io.github.kurrycat2004.opeq.mixin",
+  "refmap": "mixins.opeq.refmap.json",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "utils.EMCHelperMixin",
+    "events.ToolTipEventMixin"
+  ]
+}
