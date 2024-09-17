@@ -23,6 +23,8 @@ public class ConfigManager {
     public static Configuration cfg;
     public static File configFile;
 
+    // The following code is taken from the ConfigAnytime project, which is licensed under the MIT License:
+    // https://github.com/CleanroomMC/ConfigAnytime/blob/765cc801b7b3da597cf8c6eb1f6594fd0adb2e71/src/main/java/com/cleanroommc/configanytime/ConfigAnytime.java#L25
     private static final MethodHandle CONFIGMANAGER$SYNC;
 
     static {
@@ -37,6 +39,7 @@ public class ConfigManager {
             throw new RuntimeException(e);
         }
     }
+    // End of ConfigAnytime code
 
     public static void preInit(FMLPreInitializationEvent event) {
         configFile = new File(event.getModConfigurationDirectory(), Tags.MODID + ".cfg");
