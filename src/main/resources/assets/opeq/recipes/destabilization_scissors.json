@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "opeq:destabilization_scissors"
+  },
+  "pattern": [
+    "LI",
+    "IH"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "L": {
+      "item": "projecte:item.pe_covalence_dust",
+      "data": 0
+    },
+    "H": {
+      "item": "projecte:item.pe_covalence_dust",
+      "data": 2
+    },
+    "I": {
+      "item": "#ingotIron"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ingotIron",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    }
+  },
+  {
+    "name": "slimeball",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "slimeball"
+    }
+  },
+  {
+    "name": "paper",
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "paper"
+    }
+  }
+]

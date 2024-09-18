@@ -1,0 +1,26 @@
+{
+  "result": {
+    "item": "opeq:stabilization_tape"
+  },
+  "pattern": [
+    "HS",
+    "PL"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "L": {
+      "item": "projecte:item.pe_covalence_dust",
+      "data": 0
+    },
+    "H": {
+      "item": "projecte:item.pe_covalence_dust",
+      "data": 2
+    },
+    "S": {
+      "item": "#slimeball"
+    },
+    "P": {
+      "item": "#paper"
+    }
+  }
+}
