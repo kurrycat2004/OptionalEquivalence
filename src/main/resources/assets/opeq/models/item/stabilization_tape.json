@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": ""
+    "layer0": "opeq:items/stabilization_tape"
   }
 }
