@@ -1,6 +1,7 @@
 package io.github.kurrycat2004.opeq.gameObj;
 
 import io.github.kurrycat2004.Tags;
+import io.github.kurrycat2004.opeq.config.settings.ServerSettings;
 import io.github.kurrycat2004.opeq.gameObj.item.ItemStabilization;
 import io.github.kurrycat2004.opeq.gameObj.recipe.RecipeDestabilizationScissors;
 import io.github.kurrycat2004.opeq.gameObj.recipe.RecipeStabilizationTape;
@@ -23,15 +24,19 @@ public class ObjectHolder {
     @SubscribeEvent
     public static void registerItems(@NotNull RegistryEvent.Register<Item> evt) {
         IForgeRegistry<Item> r = evt.getRegistry();
-        r.register(STABILIZATION_TAPE);
-        r.register(DESTABILIZATION_SCISSORS);
+        if (ServerSettings.INSTANCE.enableStabilizationItems) {
+            r.register(STABILIZATION_TAPE);
+            r.register(DESTABILIZATION_SCISSORS);
+        }
     }
 
     @SubscribeEvent
     public static void registerRecipes(@NotNull RegistryEvent.Register<IRecipe> evt) {
         IForgeRegistry<IRecipe> r = evt.getRegistry();
-        registerRecipe(r, new RecipeStabilizationTape(STABILIZATION_TAPE, "stabilization"), "recipe_stabilization_tape");
-        registerRecipe(r, new RecipeDestabilizationScissors(DESTABILIZATION_SCISSORS, "stabilization"), "recipe_destabilization_scissors");
+        if (ServerSettings.INSTANCE.enableStabilizationItems) {
+            registerRecipe(r, new RecipeStabilizationTape(STABILIZATION_TAPE, "stabilization"), "recipe_stabilization_tape");
+            registerRecipe(r, new RecipeDestabilizationScissors(DESTABILIZATION_SCISSORS, "stabilization"), "recipe_destabilization_scissors");
+        }
     }
 
     public static void registerModel(@NotNull Item item) {

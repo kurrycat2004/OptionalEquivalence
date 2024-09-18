@@ -16,4 +16,8 @@ public class ServerSettings {
         OpEqEmcHelper.STABILIZED_TAGS.clear();
         OpEqEmcHelper.STABILIZED_TAGS.addAll(Arrays.asList(INSTANCE.stabilizedTags));
     }
+
+    @Config.RequiresMcRestart
+    @Config.LangKey("opeq.config.server_settings.enable_stabilization_items")
+    public boolean enableStabilizationItems = true;
 }

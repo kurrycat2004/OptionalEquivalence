@@ -1,6 +1,7 @@
 package io.github.kurrycat2004.opeq.gameObj;
 
 import io.github.kurrycat2004.Tags;
+import io.github.kurrycat2004.opeq.config.settings.ServerSettings;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -13,7 +14,9 @@ import static io.github.kurrycat2004.opeq.gameObj.ObjectHolder.registerModel;
 public class ClientEventHandler {
     @SubscribeEvent
     public static void registerModels(@NotNull ModelRegistryEvent evt) {
-        registerModel(ObjectHolder.STABILIZATION_TAPE);
-        registerModel(ObjectHolder.DESTABILIZATION_SCISSORS);
+        if (ServerSettings.INSTANCE.enableStabilizationItems) {
+            registerModel(ObjectHolder.STABILIZATION_TAPE);
+            registerModel(ObjectHolder.DESTABILIZATION_SCISSORS);
+        }
     }
 }
