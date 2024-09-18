@@ -4,7 +4,7 @@
     "description": "Stabilize your EMC items to prevent them from being transmuted",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "logoFile": "",
+    "logoFile": "assets/opeq/logo.png",
     "url": "https://github.com/kurrycat2004/OptionalEquivalence",
     "authorList": ["kurrycat"],
     "credits": "",
