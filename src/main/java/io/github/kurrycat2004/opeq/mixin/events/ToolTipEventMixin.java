@@ -44,8 +44,8 @@ public class ToolTipEventMixin {
                     target = "Ljava/util/List;add(Ljava/lang/Object;)Z"
             ),
             slice = @Slice(
-                    from = @At(value = "INVOKE", target = "Lmoze_intel/projecte/utils/EMCHelper;doesItemHaveEmc(Lnet/minecraft/item/ItemStack;)Z"),
-                    to = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiScreen;isShiftKeyDown()Z")
+                    from = @At(value = "INVOKE", target = "Lmoze_intel/projecte/utils/EMCHelper;getEmcValue(Lnet/minecraft/item/ItemStack;)J"),
+                    to = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiScreen;isShiftKeyDown()Z", remap = true)
             )
     )
     private static <E> E modifyTooltipAdd(E e, @Share("isStabilized") @NotNull LocalBooleanRef isStabilized) {
