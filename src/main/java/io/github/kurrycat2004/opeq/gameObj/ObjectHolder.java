@@ -6,7 +6,6 @@ import io.github.kurrycat2004.opeq.gameObj.recipe.RecipeDestabilizationScissors;
 import io.github.kurrycat2004.opeq.gameObj.recipe.RecipeStabilizationTape;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemShears;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -19,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 @Mod.EventBusSubscriber(modid = Tags.MODID)
 public class ObjectHolder {
     public static final Item STABILIZATION_TAPE = new ItemStabilization("stabilization_tape");
-    public static final Item DESTABILIZATION_SCISSORS = new ItemStabilization("destabilization_scissors");
+    public static final Item DESTABILIZATION_SCISSORS = new ItemStabilization("destabilization_scissors").setAttackDamageModifier(1.0);
 
     @SubscribeEvent
     public static void registerItems(@NotNull RegistryEvent.Register<Item> evt) {
